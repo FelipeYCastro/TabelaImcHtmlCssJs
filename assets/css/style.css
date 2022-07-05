@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #81ecec;
+  --primary2-color: #0984e3;
+  --primary3-color: #00b894;
+  --primary4-color: #2ed573;
+  --primary5-color: #e17055;
+  --color-font: #333;
+  --color-font2: #000;
+  --borda-arredondada: 15px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    60deg,
+    var(--primary-color),
+    var(--primary2-color)
+  );
+  font-family: "Open Sans", sans-serif;
+  /* font-size: 1.3em; */
+  line-height: 1.5em;
+}
+
+.container {
+  max-width: 640px;
+  margin: 50px auto;
+  background: var(--primary3-color);
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+.dados {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+/* usando o display bloco em todos os objetos,cada 1 ficará em sua linha form input */
+form input,
+form label,
+form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+form input {
+  font-size: 24px;
+  height: 50px;
+  padding: 0 20px;
+  border-radius: var(--borda-arredondada);
+  text-align: center;
+}
+
+form input:focus,
+form button:focus {
+  outline: 2px solid var(--primary2-color);
+}
+
+form button {
+  border: none;
+  background: var(--primary-color);
+  color: var(--color-font);
+  font-size: 18px;
+  height: 50px;
+  border-radius: var(--borda-arredondada);
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: all 400ms ease-in-out;
+}
+
+form button:hover {
+  background: var(--primary2-color);
+  color: var(--color-font2);
+}
+
+.paragrafo-resultado-ok {
+  background: var(--primary4-color);
+  padding: 10px 20px;
+  border-radius: var(--borda-arredondada);
+}
+
+.dado-invalido {
+  background: var(--primary5-color);
+  padding: 10px 20px;
+  border-radius: var(--borda-arredondada);
+}
